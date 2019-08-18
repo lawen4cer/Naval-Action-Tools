@@ -93,11 +93,12 @@ namespace NavalActionTools.UI
             {
                 bool success = SetForegroundWindow(p);
                 Console.WriteLine(success);
+                await Task.Delay(300000);
                 await Task.Delay(5000);
                 SendKeys.SendWait("s");
                 await Task.Delay(250);
-                SendKeys.SendWait("s");
-                await Task.Delay(300000);
+                SendKeys.SendWait("w");
+                
             }
             
         }

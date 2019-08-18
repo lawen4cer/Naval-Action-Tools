@@ -1,0 +1,36 @@
+﻿<Window x:Class="NavalActionTools.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NavalActionTools.UI"
+        mc:Ignorable="d"
+        Title="Naval Action Tools" Height="450" Width="800" Closed="Window_Closed">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="75"/>
+            <ColumnDefinition Width="auto"/>
+            
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Vertical" Grid.ColumnSpan="4" Margin="0,0,139.965,0">
+            <Label Name="statusMessageLabel" Content="The Script is currently turned off" Foreground="Red" FontSize="20"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="30,0,28,0">
+            <Button x:Name="sendKeysButton" Click="SendKeysButton_Click" Content="Start" Margin="3" Background="Green" Foreground="White"/>
+            <Button x:Name="killScriptButton" Click="KillScriptButton_Click" Content="Stop" Margin="3" Background="Red" Foreground="White"/>
+            <Button x:Name="hideWindowButton" Click="HideWindowButton_Click" Content="Hide Window" Margin="3"/>
+            <Button x:Name="showWindowButton" Click="ShowWindowButton_Click" Content="Show Window" Margin="3" />
+        </StackPanel>
+        <StackPanel Grid.Column="3" Grid.Row="0" Orientation="Horizontal">
+            <Label Content="Process Name:" FontSize="20" Margin="5"/>
+            <TextBox Name="processNameTextBox" Text="Client" Width="150" FontSize="20" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Margin="5"/>
+            <Button x:Name="updateProcessButton" Click="UpdateProcessButton_Click" Content="Update" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>
